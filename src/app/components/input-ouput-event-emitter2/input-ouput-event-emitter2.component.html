@@ -1,0 +1,3 @@
+<div *ngFor="let post of posts">
+    <app-input-ouput-event-emitter [post]="post" (delete)="delete(post)"></app-input-ouput-event-emitter>
+  </div>
