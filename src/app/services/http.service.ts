@@ -25,4 +25,15 @@ export class HttpService {
       `https://jsonplaceholder.typicode.com/post/${post.id}`
     );
   }
+  getPost(postId: number) {
+    return this.http.get<any>(
+      `https://jsonplaceholder.typicode.com/posts/${postId}`
+    );
+  }
+  updatePost(post: any) {
+    return this.http.put(
+      `https://jsonplaceholder.typicode.com/post/${post.id}`,
+      post
+    );
+  }
 }
