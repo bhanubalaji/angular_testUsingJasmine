@@ -16,6 +16,7 @@ describe('Http Client Testing Module', () => {
     httpClient = TestBed.inject(HttpClient);
   });
 
+  //  http test using HttpClientTestingModule  with mock simulation call
   it('should call the testurl with get Request', () => {
     httpClient.get<Data>(testUrl).subscribe();
   });

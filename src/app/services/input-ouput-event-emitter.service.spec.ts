@@ -38,6 +38,7 @@ describe('Post Service', () => {
     httpClientSpy = TestBed.inject(HttpClient) as jasmine.SpyObj<HttpClient>;
   });
 
+  //http test using httpClientSpy with mock simulation call
   describe('getPosts()', () => {
     it('should return expected posts when getposts is called', (done: DoneFn) => {
       httpClientSpy.get.and.returnValue(of(POSTS));

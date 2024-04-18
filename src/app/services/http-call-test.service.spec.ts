@@ -34,7 +34,7 @@ describe('HttpCallService (HttpClientTestingModule)', () => {
     HttpCallService = TestBed.inject(HttpCallTestService);
     httpTestingController = TestBed.inject(HttpTestingController);
   });
-
+// http test using httpTestingController with mock simulation call
   describe('getPosts()', () => {
     it('should return posts when getPosts() is called', (done: DoneFn) => {
       HttpCallService.getPosts().subscribe((data) => {
