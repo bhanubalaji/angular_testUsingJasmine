@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class InputOuputEventEmitterService {
+export class HttpCallTestService {
   constructor(private http: HttpClient) {}
 
   getPosts() {
@@ -14,6 +14,11 @@ export class InputOuputEventEmitterService {
   deletePost(post: any) {
     return this.http.delete(
       `https://jsonplaceholder.typicode.com/post/${post.id}`
+    );
+  }
+  getPost(postId: number) {
+    return this.http.get<any>(
+      `https://jsonplaceholder.typicode.com/posts/${postId}`
     );
   }
 }
